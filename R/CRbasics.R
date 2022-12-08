@@ -34,6 +34,8 @@ CRprojectBuilder <- function(){
     ),fileConn.import)
     close(fileConn.import)
   }
+
+  file.edit(CRnormalizePath("code\\_import.R"))
 }
 
 
