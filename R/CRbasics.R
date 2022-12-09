@@ -30,7 +30,7 @@ CRprojectBuilder <- function(){
   if(!file.exists(CRnormalizePath("code\\_import.R"))){
     file.create(CRnormalizePath("code\\_import.R"))
     fileConn.import <- file(CRnormalizePath("code\\_import.R"))
-    writeLines(c("# library(tidytable) # dplyr interface to use data.table","library(tidyverse)","library(CRbasics)","library(readxl)","library(lubridate) # handling dates/ timestamps","","options(scipen=5) # change to adjust number of decimals used before switching to scientific notation"
+    writeLines(c("library(tidyverse)","library(CRbasics)","library(readxl)","library(lubridate) # handling dates/ timestamps","","options(scipen=5) # change to adjust number of decimals used before switching to scientific notation"
     ),fileConn.import)
     close(fileConn.import)
   }
