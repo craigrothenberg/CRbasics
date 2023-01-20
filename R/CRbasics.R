@@ -30,7 +30,7 @@ CRprojectBuilder <- function(){
   if(!file.exists(CRnormalizePath("code\\_import.R"))){
     file.create(CRnormalizePath("code\\_import.R"))
     fileConn.import <- file(CRnormalizePath("code\\_import.R"))
-    writeLines(c("library(tidyverse)","library(CRbasics)","library(readxl)","library(lubridate) # handling dates/ timestamps","","options(scipen=5) # change to adjust number of decimals used before switching to scientific notation"
+    writeLines(c("library(tidyverse)","library(CRbasics)","library(readxl)","library(lubridate) # handling dates/ timestamps","library(ggthemes) # ggplot formatting","library(scales) # color and number formatting","","options(scipen=5) # change to adjust number of decimals used before switching to scientific notation"
     ),fileConn.import)
     close(fileConn.import)
   }
@@ -54,3 +54,19 @@ round2 <- function( vec , digits=0 ){
 }
 
 
+CRcolorPalette <- c(
+  "#33b1ff",
+  "#8a3ffc",
+  "#007d79",
+  "#ff7eb6",
+  "#fa4d56",
+  "#fff1f1",
+  "#6fdc8c",
+  "#4589ff",
+  "#d12771",
+  "#d2a106",
+  "#08bdba",
+  "#bae6ff",
+  "#ba4e00",
+  "#d4bbff"
+)
